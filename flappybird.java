@@ -31,8 +31,7 @@ public class flappybird implements ActionListener, KeyListener{
 	public int score = 0;
 	public int highScore = 0;
 
-	//ticks, movements, etc
-	public int ticks = 0;
+	//movement, die/start bools
 	public float velocity = 0;
 	public boolean die;
 	public boolean start;
@@ -111,7 +110,6 @@ public class flappybird implements ActionListener, KeyListener{
 	public void actionPerformed(ActionEvent a){ // necessary method from ActionListener interface
 		
 		int pipeSpeed = PIPESPEED;
-		ticks++;
 
 		if(start && !die){ // only if game is not over
 			for(int i = 0; i < pipe.size(); i++){ // moves pipes left
